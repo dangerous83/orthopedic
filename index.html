@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0754a2">
+  <meta name="description" content="OrthoSports — Health, Wellness, Fitness. Our new website is coming soon.">
+  <title>OrthoSports | Health · Wellness · Fitness</title>
+  <link rel="icon" type="image/png" href="./ortho-logo.png">
+  <style>
+    :root{color-scheme:light;--blue:#0754a2;--cyan:#088fbd;--ink:#102c43;--muted:#526778;--line:#dce6ed;--paper:#f4f8fb}
+    *{box-sizing:border-box}
+    html{background:var(--paper)}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+    .page{max-width:1600px;margin:auto;padding:0 6vw}
+    header{min-height:124px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line)}
+    .logo{display:block;width:270px;max-width:100%;height:auto}
+    .launch{display:flex;align-items:center;gap:9px;color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .launch:before{content:"";width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 0 5px #088fbd12}
+    main{display:grid;grid-template-columns:1.12fr 1fr;gap:5vw;align-items:center;min-height:660px;padding:64px 0 60px}
+    .eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 26px;font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:700;color:var(--blue)}
+    .eyebrow:before{content:"";width:32px;height:2px;background:var(--cyan)}
+    h1{font-size:clamp(48px,5.8vw,88px);font-weight:600;line-height:1.02;letter-spacing:-.065em;margin:0 0 26px;max-width:700px}
+    h1 span{display:block;color:var(--blue)}
+    .intro{max-width:440px;font-size:18px;line-height:1.65;color:var(--muted);margin:0}
+    .intro strong{font-weight:400;color:var(--ink)}
+    .notice{margin-top:34px;display:inline-flex;align-items:center;gap:12px;font-size:13px;color:var(--blue);padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .notice svg{width:18px;height:18px;flex:none}
+    .art{position:relative;aspect-ratio:1;max-width:540px;width:100%;justify-self:end;overflow:hidden;border-radius:50%;background:radial-gradient(ellipse at 25% 20%,#138ebd 0,#0b66ad 34%,#06458b 73%,#043b76 100%);box-shadow:0 28px 65px -42px #074582a0;isolation:isolate}
+    .art:after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(140deg,#fff1,transparent 45%);pointer-events:none}
+    .motion{position:absolute;inset:0;width:100%;height:100%;animation:arrive 1.4s ease-out both}
+    .art-label{position:absolute;bottom:14%;left:0;right:0;text-align:center;color:#dcf3ff;letter-spacing:.26em;font-size:10px;text-transform:uppercase}
+    .focus{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .focus article{padding:30px 30px 32px 0}
+    .focus article+article{border-left:1px solid var(--line);padding-left:32px}
+    .number{display:block;color:var(--cyan);font-size:11px;letter-spacing:.1em;margin-bottom:15px}
+    h2{font-size:23px;letter-spacing:-.025em;font-weight:500;margin:0 0 10px}
+    .focus p{font-size:14px;line-height:1.6;color:var(--muted);margin:0;max-width:260px}
+    footer{display:flex;justify-content:space-between;gap:16px;padding:26px 0 30px;color:var(--muted);font-size:11px;line-height:1.6}
+    footer span:last-child{letter-spacing:.06em}
+    @keyframes arrive{from{opacity:0;transform:rotate(-12deg) scale(.93)}to{opacity:1;transform:rotate(0) scale(1)}}
+    @media(min-width:1600px){.page{padding:0 100px}}
+    @media(max-width:900px){header{min-height:108px}.logo{width:235px}main{min-height:570px;gap:4vw;padding:50px 0}.intro{font-size:16px}.art-label{font-size:8px;letter-spacing:.18em}.focus article{padding-right:20px}.focus article+article{padding-left:22px}}
+    @media(max-width:640px){.page{padding:0 24px}header{min-height:96px;gap:12px}.logo{width:195px}.launch{font-size:9px;letter-spacing:.03em;white-space:normal;max-width:94px;line-height:1.6}.launch:before{width:6px;height:6px;flex:none;box-shadow:none}main{grid-template-columns:1fr;padding:44px 0 36px;gap:34px;min-height:0}.eyebrow{font-size:10px;margin-bottom:22px}h1{font-size:clamp(44px,11.5vw,70px);margin-bottom:22px}.intro{font-size:16px}.notice{margin-top:24px;font-size:12px}.art{width:82%;max-width:340px;justify-self:center}.art-label{font-size:9px}.focus{grid-template-columns:1fr}.focus article,.focus article+article{padding:22px 0;display:grid;grid-template-columns:32px 1fr;column-gap:14px;border-left:0}.focus article+article{border-top:1px solid var(--line)}.number{grid-row:1/3;margin:5px 0 0}h2{font-size:21px;margin-bottom:5px}.focus p{max-width:none;font-size:13px}footer{flex-direction:column;gap:7px;padding:23px 0}}
+    @media(prefers-reduced-motion:reduce){.motion{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img class="logo" src="./ortho-logo.png" width="736" height="205" alt="OrthoSports — Health Wellness Fitness">
+      <span class="launch">New website coming soon</span>
+    </header>
+    <main>
+      <div>
+        <p class="eyebrow">Health · Wellness · Fitness</p>
+        <h1>Better movement.<span>Better living.</span></h1>
+        <p class="intro"><strong>A fresh online experience is on the way.</strong> We're creating a new home for OrthoSports, built around health, wellness and fitness.</p>
+        <div class="notice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Full website coming soon
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg class="motion" viewBox="0 0 540 540" fill="none">
+          <defs><linearGradient id="ribbon" x1="100" y1="120" x2="440" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#9bdaed"/></linearGradient></defs>
+          <circle cx="270" cy="270" r="218" stroke="#fff" stroke-opacity=".12"/>
+          <circle cx="270" cy="270" r="180" stroke="#fff" stroke-opacity=".08"/>
+          <path d="M75 330C142 209 260 389 391 208" stroke="#a0e6ff" stroke-opacity=".17" stroke-width="1.5"/>
+          <path d="M119 368C167 438 313 410 375 312C419 242 393 168 320 145C359 195 324 263 255 291C200 313 157 323 119 368Z" fill="url(#ribbon)"/>
+          <path d="M198 120C226 166 239 196 213 247C279 213 291 157 262 120C248 102 220 96 198 120Z" fill="#fff"/>
+          <path d="M131 285C153 269 179 257 205 246" stroke="#fff" stroke-opacity=".6" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="131" cy="285" r="4" fill="#a0e6ff"/>
+          <path d="M390 360l15 15m0-15l-15 15" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
+        </svg>
+        <span class="art-label">A positive step forward</span>
+      </div>
+    </main>
+    <section class="focus" aria-label="The OrthoSports focus">
+      <article><span class="number">01</span><h2>Health</h2><p>A foundation for everyday wellbeing.</p></article>
+      <article><span class="number">02</span><h2>Wellness</h2><p>Balance for the way you live.</p></article>
+      <article><span class="number">03</span><h2>Fitness</h2><p>Inspired by the freedom to move.</p></article>
+    </section>
+    <footer><span>© 2026 OrthoSports. All rights reserved.</span><span>HEALTH. WELLNESS. FITNESS.</span></footer>
+  </div>
+</body>
+</html>
