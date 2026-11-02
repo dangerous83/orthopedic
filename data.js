@@ -42,3 +42,23 @@ next.addEventListener('click',()=>{if(unlocked){video.pause();document.querySele
 document.addEventListener('click',e=>{if(unlocked)return;const a=e.target.closest('a');if(a&&!shell.contains(a)&&a.getAttribute('href')!=='#vision'&&a.getAttribute('href')!=='#proposalFilm'){e.preventDefault();e.stopImmediatePropagation();shell.scrollIntoView({behavior:'smooth',block:'center'});play.focus({preventScroll:true});status.textContent='Please play the introduction first to unlock the proposal.';}},true);
 if(location.hash&&location.hash!=='#vision')requestAnimationFrame(()=>hero.scrollIntoView());
 })();
+
+;(()=>{
+const lock=document.createElement('div');lock.id='desktopOnlyNotice';lock.setAttribute('role','main');lock.innerHTML='<img src="assets/logo.png" alt="OrthoSports"><span class="desktop-label">ORTHOSPORTS × CREAIVA</span><div class="desktop-symbol" aria-hidden="true">▱</div><h1>Best viewed on a computer.</h1><p>This proposal is designed for a wide desktop or laptop screen. Please open this link on your computer to view the presentation.</p><small>Desktop experience · 1024px minimum screen width</small>';document.body.append(lock);
+const css=document.createElement('style');css.textContent=`
+#desktopOnlyNotice{display:none}
+@media(max-width:1023px),(hover:none) and (pointer:coarse){
+html,body{overflow:hidden!important;height:100%!important;min-width:0!important}
+body>*:not(#desktopOnlyNotice){display:none!important}
+#desktopOnlyNotice{display:flex!important;position:fixed;inset:0;z-index:2147483647;overflow:auto;flex-direction:column;align-items:center;justify-content:center;padding:32px 26px;box-sizing:border-box;text-align:center;background:radial-gradient(ellipse at top right,#e6f4ff,transparent 60%),#f8fbfd;font-family:Inter,Arial,sans-serif;color:#132d48}
+#desktopOnlyNotice img{width:220px;max-width:80%;height:auto;margin-bottom:26px}
+#desktopOnlyNotice .desktop-label{font-size:9px;letter-spacing:2px;color:#65798c}
+#desktopOnlyNotice .desktop-symbol{margin:26px 0 12px;width:80px;height:66px;display:grid;place-items:center;color:#0c51a0;font-size:60px;line-height:1}
+#desktopOnlyNotice h1{font-size:clamp(25px,6vw,36px);line-height:1.18;letter-spacing:-1px;margin:14px 0 16px;max-width:420px}
+#desktopOnlyNotice p{font-size:15px;line-height:1.75;max-width:390px;margin:0}
+#desktopOnlyNotice small{font-size:11px;color:#65798c;margin-top:30px}
+}`;document.head.append(css);
+const narrow=matchMedia('(max-width:1023px), (hover:none) and (pointer:coarse)');
+function syncDesktop(){if(narrow.matches){document.querySelectorAll('video,audio').forEach(v=>v.pause());if(window.speechSynthesis)window.speechSynthesis.cancel();}}
+narrow.addEventListener('change',syncDesktop);syncDesktop();
+})();
